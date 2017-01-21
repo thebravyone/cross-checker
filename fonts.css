@@ -1,0 +1,13 @@
+/**
+* @Author: Guilherme Serradilha
+* @Date:   21-Jan-2017 1:29:17
+* @Filename: fonts.css
+* @Last modified by:   Guilherme Serradilha
+* @Last modified time: 21-Jan-2017 12:31:36
+* @License: MIT
+*/
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf')  format('truetype');
+}

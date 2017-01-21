@@ -1,0 +1,25 @@
+{
+  "name": "cross-checker",
+  "version": "1.0.0",
+  "description": "Cross-checks all content inside given directory against a list of files",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebravyone/cross-checker.git"
+  },
+  "author": "thebravyone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebravyone/cross-checker/issues"
+  },
+  "homepage": "https://github.com/thebravyone/cross-checker#readme",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-animate": "^1.5.9",
+    "angular-aria": "^1.5.9",
+    "angular-material": "^1.1.1"
+  }
+}

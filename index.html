@@ -1,0 +1,77 @@
+<!--
+@Author: Guilherme Serradilha
+@Date:   21-Jan-2017 0:25:21
+@Filename: index.html
+@Last modified by:   Guilherme Serradilha
+@Last modified time: 21-Jan-2017 17:08:54
+@License: MIT
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./console.css">
+  <link rel="stylesheet" href="./node_modules/angular-material/angular-material.css">
+</head>
+  <body ng-app="App">
+
+    <div ng-controller="Ctrl" layout="column" style="height:100%;">
+      <section layout="row" flex>
+
+        <md-sidenav
+            class="md-sidenav-left"
+            md-is-locked-open="true"
+            md-whiteframe="4"
+            style="-webkit-user-select: none;">
+
+          <md-toolbar class="md-theme-teal" style="-webkit-app-region: drag">
+            <h1 class="md-toolbar-tools"><md-icon md-svg-src="./icons/ic_shuffle_white_48px.svg" style="margin: 0 10px 0 0;" class="s48"></md-icon>Cross-Checker</h1>
+          </md-toolbar>
+          <md-content layout-padding>
+            <md-list>
+              <md-list-item class="md-2-line">
+                <div class="md-list-item-text">
+                  <h3>List of filenames</h3>
+                  <p>{{(list.name | limitTo: 18) + (list.name.length  > 18 ? '...' : '')}}</p>
+                </div>
+                <md-button class="md-secondary md-raised"  ng-click="BrowseFile()">Select</md-button>
+                <md-divider></md-divider>
+              </md-list-item>
+              <md-list-item class="md-2-line">
+                <div class="md-list-item-text">
+                  <h3>Directory to search</h3>
+                  <p>{{(dir | limitTo: 18) + (dir.length  > 18 ? '...' : '')}}</p>
+                </div>
+                <md-button class="md-secondary md-raised" ng-click="BrowseFolder()">Browse</md-button>
+              </md-list-item>
+              <md-list-item class="md-2-line">
+                <md-button class="md-raised md-primary" ng-click="Run()">Run</md-button>
+              </md-list-item>
+            </md-list>
+          </md-content>
+
+        </md-sidenav>
+
+        <md-content id="console-text" class="console" flex layout="column" layout-align="top left" style="padding: 16px 24px;">
+
+            <p style="-webkit-margin-before: 0em;">Welcome to Cross-Checker!</p>
+            <p>Pick a list of filenames and check if they match with files in a directory.</p>
+
+        </md-content>
+
+      </section>
+    </div>
+
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-aria/angular-aria.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.js"></script>
+    <script src="./node_modules/angular-material/angular-material.js"></script>
+
+    <script>
+        require('./renderer.js')
+    </script>
+
+  </body>
+</html>
